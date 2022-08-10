@@ -1,0 +1,15 @@
+// px to vw
+.calPx2vw() {
+    @function: `~(function() {
+            this.px2vw=function(px) {
+                return (px/375) * 100+'vw';
+            }
+        })()`
+}
+
+.calPx2vw();
+
+// 使用，
+// 在使用的地方 @import 引入
+// ~`px2vw(16) `;
+// webpack 需要开启 javascriptEnabled：true
